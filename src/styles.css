@@ -2,3 +2,47 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+.conversations {
+  background-color: mediumaquamarine;
+  width: 30vw;
+  height: 98vh;
+}
+
+/* Hide the side panel by default on mobile */
+.side-panel {
+  display: none;
+}
+
+/* Hide the toggle button by default */
+.toggle-button {
+  display: none;
+}
+
+/* Show the toggle button on mobile */
+@media screen and (max-width: 768px) {
+  /* Adjust the max-width as per your requirement */
+  .toggle-button {
+    display: block;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+  }
+}
+
+/* Show the side panel on desktop */
+@media screen and (min-width: 769px) {
+  .side-panel {
+    display: block;
+    width: "15vw";
+  }
+}
+
+/* Additional class to manage visibility */
+.side-panel.visible {
+  display: block;
+  width: "95vw";
+  clear: right;
+}
